@@ -19,7 +19,6 @@ if upload is not None:
     filename = upload.name
     df = pd.read_excel(filename)
 else:
-    os.chdir(r"C:\Users\Tuan\Desktop\Vinasoy\Analysis")
     df = pd.read_excel('Vinasoy.xlsx')
 
 uploadTarget = st.sidebar.file_uploader(label = 'Tải file chỉ tiêu vào đây',type = ['xlsx', 'xls'])
@@ -28,7 +27,6 @@ if uploadTarget is not None:
     filename2 = uploadTarget.name
     dfTarget = pd.read_excel(filename2)
 else:
-    os.chdir(r"C:\Users\Tuan\Desktop\Vinasoy\Analysis")
     dfTarget = pd.read_excel('Target.xlsx')
 
 # Choose start date and end date
